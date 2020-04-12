@@ -16,6 +16,10 @@ public struct Color: Codable, Equatable {
         self.saturation = max(0, min(saturation, 1))
         self.brightness = max(0, min(brightness, 1))
     }
+    
+    public init(hue: Hue, saturation: Double, brightness: Double) {
+        self.init(hue: hue.value, saturation: saturation, brightness: brightness)
+    }
 
     /// Initializes a new Color struct with the provided RGBA color parameters
     ///
