@@ -49,12 +49,4 @@ public struct Color: Codable, Equatable {
 
         self.init(hue: hue, saturation: saturation, brightness: brightness)
     }
-
-    public func maxComponentOffset(with color: Color) -> Double {
-        return [
-            self.hue - color.hue,
-            self.saturation - color.saturation,
-            self.brightness - color.brightness
-        ].map { abs($0) }.max() ?? 0.0
-    }
 }
