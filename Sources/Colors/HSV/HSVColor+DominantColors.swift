@@ -7,7 +7,7 @@ extension Collection where Element == HSVColor {
         
         guard colorBins.count != 0 else { return nil }
         
-        if let dominantBin = colorBins.max(by: { $0.key > $1.key }) {
+        if let dominantBin = colorBins.max(by: { $0.value.count < $1.value.count }) {
             let elementsCount: Int = dominantBin.value.count
             let saturationSum: Int = dominantBin.value.reduce(0) { $0 + Int($1.saturation) }
             let valueSum: Int = dominantBin.value.reduce(0) { $0 + Int($1.value) }
