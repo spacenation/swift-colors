@@ -12,7 +12,7 @@ final class HSBColorDominantColorsTests: XCTestCase {
             HSBColor(hue: 1, saturation: 10, brightness: 10)
         ]
         
-        XCTAssert(colors.dominantColor(saturationRange: 50...255, brightnessUnitRange: 20...255) == HSBColor(hue: 2, saturation: 129, brightness: 210))
+        XCTAssert(colors.dominantColor(saturationRange: 50...255, brightnessRange: 20...255) == HSBColor(hue: 2, saturation: 129, brightness: 210))
     }
 
     static var allTests = [
