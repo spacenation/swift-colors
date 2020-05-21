@@ -1,3 +1,3 @@
-![ci](https://github.com/spacenation/colors.swift/workflows/ci/badge.svg)
+![ci](https://github.com/swift-extensions/colors/workflows/ci/badge.svg)
 
 ## Colors
